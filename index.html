@@ -158,9 +158,6 @@
       box-shadow: 0 2px 0 rgba(0,0,0,0.2) !important;
     }
 
-    /* ========================================================
-       ESQUINAS INTERACTIVAS (DINO ABECEDARIO Y DRAGÓN TABLAS)
-       ======================================================== */
     
     .esquina-escolar {
       position: fixed;
@@ -230,7 +227,7 @@
       50% { transform: translateY(-6px); }
     }
 
-    /* --- EL ABECEDARIO PURO DEL DINOSAURIO --- */
+   
     .abc-grid-puro {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -254,7 +251,7 @@
     }
     .letra-boton:hover { background: #e8f5e9; }
     
-    /* Animación divertida al tocar las letras */
+  
     .letra-animada {
       animation: reboteLetra 0.3s ease-out;
       background: #c8e6c9 !important;
@@ -266,7 +263,7 @@
       100% { transform: scale(1); }
     }
 
-    /* --- TABLAS DRAGÓN --- */
+  
     .tablas-contenedor { display: flex; flex-direction: column; gap: 10px; }
     .selector-tablas { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
     .btn-numero-tabla {
@@ -337,9 +334,7 @@
   </main>
 
 
-  <!-- ========================================================
-       ESQUINA IZQUIERDA: EL ABECEDARIO INTERACTIVO DEL DINO
-       ======================================================== -->
+ 
   <div class="esquina-escolar esquina-izq">
     <div class="popover-educativo" id="popover-abc">
       
@@ -351,7 +346,7 @@
         </div>
       </div>
 
-      <!-- Cuadrícula limpia y pura del Abecedario -->
+     
       <div class="abc-grid-puro">
         <button class="letra-boton" onclick="animarLetra(this)">A</button>
         <button class="letra-boton" onclick="animarLetra(this)">B</button>
@@ -387,9 +382,7 @@
   </div>
 
 
-  <!-- ========================================================
-       ESQUINA DERECHA: EL DRAGÓN DE LAS TABLAS
-       ======================================================== -->
+
   <div class="esquina-escolar esquina-der">
     <div class="popover-educativo" id="popover-tablas">
       
@@ -422,7 +415,7 @@
   </div>
 
 
-  <!-- LÓGICA DE CONTROL -->
+ 
   <script {nonce}>
     function toggleCriatura(id) {
       const ventana = document.getElementById(id);
@@ -432,7 +425,6 @@
       if (!abierta) ventana.style.display = 'block';
     }
 
-    // --- EFECTO INTERACTIVO DEL DINOSAURIO ---
     function animarLetra(boton) {
       boton.classList.remove('letra-animada');
       void boton.offsetWidth; // Reinicia la animación en el navegador
@@ -444,7 +436,7 @@
       }, 300);
     }
 
-    // --- LAS TABLAS DEL DRAGÓN ---
+
     function lanzarFuego(numero) {
       const pizarra = document.getElementById('pizarra-fuego');
       pizarra.innerHTML = '';
